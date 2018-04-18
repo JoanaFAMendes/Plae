@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".AddGame">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBar"
+        android:minHeight="?attr/actionBarSize"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/logo_icon"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="28dp"
+            android:onClick="click"
+            android:contentDescription="@string/lll" />
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/game_name2"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand"
+        android:hint="Nome"
+        android:inputType="textLongMessage|textPersonName"
+        android:textColor="@color/colorLetters"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Adicionar Jogo"
+        android:textColor="@color/colorLetters"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar1" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Preço por 30 min"
+        android:textColor="@color/colorLetters"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_name2" />
+
+    <Button
+        android:id="@+id/vinte"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand"
+        android:text="0.20€"
+        android:textColor="@color/colorLetters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:onClick="getElements"/>
+
+    <Button
+        android:id="@+id/cinquenta"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand"
+        android:text="0.50€"
+        android:textColor="@color/colorLetters"
+        app:layout_constraintStart_toEndOf="@+id/vinte"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:onClick="getElements"/>
+
+    <Button
+        android:id="@+id/um"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand"
+        android:text="1.00€"
+        android:textColor="@color/colorLetters"
+        app:layout_constraintStart_toEndOf="@+id/cinquenta"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:onClick="getElements"/>
+
+    <Button
+        android:id="@+id/um_cinquenta"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand"
+        android:text="1.50€"
+        android:textColor="@color/colorLetters"
+        app:layout_constraintStart_toEndOf="@+id/um"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:onClick="getElements"/>
+
+    <Button
+        android:id="@+id/dois"
+        android:layout_width="58dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand"
+        android:onClick="getElements"
+        android:text="2.00€"
+        android:textColor="@color/colorLetters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/um_cinquenta"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Descrição"
+        android:textColor="@color/colorLetters"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vinte" />
+
+    <EditText
+        android:id="@+id/description1"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand"
+        android:hint="Descrição"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorLetters"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Icon para o jogo"
+        android:textColor="@color/colorLetters"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description1" />
+
+    <ImageView
+        android:id="@+id/cartas"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/cards"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/dados"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/cartas"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/dice"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/ping"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/dados"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/ping_pong"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getElements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ping"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/playstation" />
+
+    <ImageView
+        android:id="@+id/puzzle"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartas"
+        app:srcCompat="@drawable/puzzle"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/snooker"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/puzzle"
+        app:layout_constraintTop_toBottomOf="@+id/cartas"
+        app:srcCompat="@drawable/snooker"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/dardos"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/snooker"
+        app:layout_constraintTop_toBottomOf="@+id/cartas"
+        app:srcCompat="@drawable/dardos"
+        android:onClick="getElements"/>
+
+    <ImageView
+        android:id="@+id/matrecos"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getElements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dardos"
+        app:layout_constraintTop_toBottomOf="@+id/cartas"
+        app:srcCompat="@drawable/foosball" />
+
+    <Button
+        android:id="@+id/add_game"
+        android:layout_width="117dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Adicionar"
+        android:textColor="@color/colorLetters"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle"
+        android:onClick="addGame"/>
+
+</android.support.constraint.ConstraintLayout>
